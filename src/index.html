@@ -6,21 +6,21 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-<section id = pagina >
-  <h1>tuSecret</h1>
-  <p>¡Hola! En esta página podrás <strong>develar </strong>y <strong>crear</strong> mensajes secretos.<br>¿Qué
-  quieres hacer?
-  </p>
+  <header>
+    <h1>tuSecret</h1>
+  </header>
+  <section>
+  <p>¡Hola! En esta página podrás <strong>develar </strong>y <strong>crear</strong> mensajes secretos.</p>
   <img src="https://image.ibb.co/b2nwVL/icon.png" alt="icono" border="0"width="100"height="100"align="left">
-  <label for="desplazamiento">Desplazamiento:</label>
-	<input type="number" min="1" max="25" step="1" value="1" id="desplazamiento" name="desplazamiento" class="form-control">
-  <label for="texto">Texto a cifrar:</label>
-	<textarea type="text" name="texto" id="texto" class="form-control"></textarea>
-  <label for="cifrado">Texto cifrado:</label>
-  <textarea type="text" name="cifrado" id="cifrado" class="form-control" disabled="disabled"></textarea>
-  <button type="button"id='bDescifrado' onclick= 'cDescifrado()'>Descifrar</button>
-</section>
-  <div id="root"></div>
+  </section>
+    <p>Ingresa el mensaje que quieres cifrar o descifrar</p>
+    <input type="text" id="fraseInicial">
+    <p>Número de desplazamiento</p>
+    <input type="text" id="key">
+    <button type="submit" onclick="encodeText()">Cifrar</button>
+    <button type="submit" onclick="uncodeText()">Descifrar</button>
+    <div id = "descifrado">Aqui aparecerá tu mensaje cifrado/descifrado</div>
+    <div id="root"></div>
   <script src="cipher.js"></script>
   <script src="index.js"></script>
   </body>
