@@ -4,22 +4,22 @@
     <meta charset="utf-8">
     <title>tuSecret</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Cutive" rel="stylesheet">
   </head>
   <body>
   <header>
     <h1>tuSecret</h1>
   </header>
   <section>
-  <p>¡Hola! En esta página podrás <strong>develar </strong>y <strong>crear</strong> mensajes secretos.</p>
-  <img src="https://image.ibb.co/b2nwVL/icon.png" alt="icono" border="0"width="100"height="100"align="left">
-  </section>
+    <p>¡Hola! En esta página podrás <strong>develar </strong>y <strong>crear</strong> mensajes secretos.</p>
     <p>Ingresa el mensaje que quieres cifrar o descifrar</p>
-    <input type="text" id="fraseInicial">
+    <textarea type="text" id="fraseInicial"> </textarea>
     <p>Número de desplazamiento</p>
     <input type="text" id="key">
-    <button type="submit" onclick="encodeText()">Cifrar</button>
-    <button type="submit" onclick="uncodeText()">Descifrar</button>
-    <div id = "descifrado">Aqui aparecerá tu mensaje cifrado/descifrado</div>
+    <button id="botoncifro"type="submit" onclick="encodeText()">Cifrar</button>
+    <button id="botondescifro"type="submit" onclick="uncodeText()">Descifrar</button>
+  </section>
+    <div id = "descifrado">Aquí aparece tu texto cifrado/descifrado</div>
     <div id="root"></div>
   <script src="cipher.js"></script>
   <script src="index.js"></script>
