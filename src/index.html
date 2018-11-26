@@ -2,21 +2,23 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <title>tuSecret</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Cutive" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Carter+One|Lato|Viga" rel="stylesheet">
   </head>
   <body>
   <header>
     <h1>tuSecret</h1>
   </header>
   <section>
-    <p>¡Hola! En esta página podrás <strong>develar </strong>y <strong>crear</strong> mensajes secretos.</p>
-    <p>Ingresa el mensaje que quieres cifrar o descifrar</p>
-    <textarea type="text" id="fraseInicial"> </textarea>
+    <h2>¡Hola! En esta página podrás develar y crear mensajes secretos.</h2>
+    <h3>Ingresa el mensaje que quieres cifrar o descifrar</h3>
+    <textarea type="text" id="mensajeCipher"> </textarea>
+  <div>
     <p>Número de desplazamiento</p>
     <input type="text" id="key">
+  </div>
     <button id="botoncifro"type="submit" onclick="encodeText()">Cifrar</button>
     <button id="botondescifro"type="submit" onclick="uncodeText()">Descifrar</button>
   </section>
