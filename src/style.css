@@ -1,9 +1,13 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
 h1{
 color: white;
 text-shadow: 5px black;
 font-size: 65px;
 text-align: center;
-text-shadow: 2px black;
 user-select: none;
 }
 p{
@@ -21,10 +25,11 @@ transition: width 2s;
 height: 100px;
 }
 #fraseInicial:hover{
-width: 400px;
+width: 300px;
 }
 body{
-background-image: url(http://eskipaper.com/images/beautiful-gradient-wallpaper-1.jpg);
+background-color: gray;
+background-position: center;
 text-align: center;
 color:white;
 font-size: 25px;
