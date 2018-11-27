@@ -1,38 +1,23 @@
-let message;
-let string = [];
-let code = [];
-let n;
-let j;
-let newCode = [];
-//FunciónCifrado
-function encodeText()
-{
-message = document.getElementById("mensajeCipher").value;
-n = document.getElementById("key").value;
-for(j = 0; j < message.length; j++){
-  string.push((message.charCodeAt(j))-65+n%26+65);
-  code.push(String.fromCharCode(string[j]));
-}
-newCode = code.join("");
-document.getElementById("descifrado").innerHTML = (newCode.toUpperCase());
-
-string = [];
-code = [];
-}
-//FunciónDescifrado
-function uncodeText()
-{
-message = document.getElementById("mensajeCipher").value;
-n = document.getElementById("key").value;
-for(j = 0; j < message.length; j++){
-  string.push((message.charCodeAt(j))+65-n%26-65);
-  code.push(String.fromCharCode(string[j]));
-}
-newCode = code.join("");
-document.getElementById("descifrado").innerHTML = (newCode.toUpperCase());
-
- /* console.log(string); muestra codigo ASCII
- console.log(code); muestra mensaje desencriptado */
-string = []; //vacia la cadena
-code = []; //vacia la cadena
-}
+//declarando variables y botones
+let string = '';
+let offset = '';
+let btnCifrado = document.getElementById('botoncifro');
+let btnDescifrado = document.getElementById('botondescifro');
+let mensajeCifrado = document.getElementById('message1');
+let resultado = '';
+//evento del botón cifrar
+btnCifrado.addEventListener('click',()=>{
+string = document.getElementById('message1').value;
+offset = document.getElementById('key').value;
+resultado = cipher.encode(string,offset);
+console.log("entro1")
+mensajeCifrado.value = resultado ;
+});
+//evento del botón descifrar
+btnDescifrado.addEventListener('click',()=>{
+string = document.getElementById('message1').value;
+offset = document.getElementById('key').value;
+resultado = cipher.decode(string,offset);
+console.log("entro2")
+mensajeCifrado.value = resultado;
+});

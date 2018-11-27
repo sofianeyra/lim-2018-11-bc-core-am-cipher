@@ -2,7 +2,6 @@ body{
  padding: 10px;
  background-image:url(http://www.brandgradients.com/img/backgrounds/instagram-hex-colors-gradient-background.png);
  background-position: center;
- background-repeat: no-repeat;
  background-size: cover;
  text-align: center;
  color:white;
@@ -25,21 +24,15 @@ p{
  font-family:'Viga', sans-serif;
  font-size: 25px;
  user-select: none}
-#mensajeCipher{
- margin-top: auto;
- margin-left: 0px;
+#message1, #message2{
  box-shadow: 4px 4px black;
  width: 350px;
  display:table-cell;
  height: 100px}
-#descifrado{
- margin-top: 30px;
- font-family:'Viga', sans-serif;
- font-size: 20px}
 #key{
  margin-left: auto;
  width: 70px}
-#botoncifro{
+#botoncifro, #botondescifro, #botonreset{
  font-size: 20px;
  display: inline-block;
  -webkit-transition-duration: 0.4s;
@@ -51,15 +44,9 @@ p{
 #botoncifro:hover {
  background-color: black;
  color: white}
-#botondescifro{
- font-size: 20px;
- display: inline-block;
- -webkit-transition-duration: 0.4s;
- transition-duration: 0.4s;
- cursor: pointer;
- text-decoration: none;
- background: white;
- border-radius: 8px}
 #botondescifro:hover{
  background-color: black;
  color:white}
+#botonreset:hover{
+  background-color: black;
+  color:white}

@@ -12,19 +12,21 @@
     <h1>tuSecret</h1>
   </header>
   <section>
-    <h2>¡Hola! En esta página podrás develar
-      y crear mensajes secretos.</h2>
+    <h2>¡Hola! En esta página podrás develar y crear mensajes secretos.</h2>
     <h3>Ingresa el mensaje que quieres cifrar o descifrar</h3>
-    <textarea type="text" id="mensajeCipher"> </textarea>
-  <div>
-    <p>Número de desplazamiento</p>
-    <input type="text" id="key">
+  <div id="firstBox">
+    <textarea id="message1" type="text" placeholder="Ingresa tu mensaje aquí."></textarea>
   </div>
-    <button id="botoncifro"type="submit" onclick="encodeText()">Cifrar</button>
-    <button id="botondescifro"type="submit" onclick="uncodeText()">Descifrar</button>
+  <div id="input">
+    <p>Número de desplazamiento</p>
+    <input type="number" id="key">
+  </div>
+  <div id="buttons">
+    <button type="button" id="botoncifro" >Cifrar</button>
+    <button type="button" id="botondescifro" >Descifrar</button>
+  </div>
   </section>
-    <div id = "descifrado">Aquí aparece tu texto cifrado/descifrado</div>
-    <div id="root"></div>
+  <div id="root"></div>
   <script src="cipher.js"></script>
   <script src="index.js"></script>
   </body>
