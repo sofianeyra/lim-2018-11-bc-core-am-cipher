@@ -1,6 +1,8 @@
-# tuSecret
+# tuSecret (Cifrado Cesar)
 
-Cifrar significa codificar. El cifrado césar es una de las técnicas más simples para cifrar un mensaje. Es un tipo de cifrado por sustitución, es decir que cada letra del texto original es reemplazada por otra que se encuentra un número fijo de posiciones (desplazamiento) más adelante en el mismo alfabeto.
+## Resumen del proyecto
+Es una página de cifrado y descifrado con el método del cifrado Cesar. Básicamente, es un tipo de cifrado por sustitución, es decir que cada letra del texto original es reemplazada por otra que se encuentra un número fijo de posiciones (desplazamiento) más adelante en el mismo alfabeto.
+
 
 Por ejemplo, si usamos un desplazamiento (_offset_) de 3 posiciones:
 
@@ -8,28 +10,29 @@ Por ejemplo, si usamos un desplazamiento (_offset_) de 3 posiciones:
 - La palabra CASA se cifra como FDVD.
 - Alfabeto sin cifrar: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 - Alfabeto cifrado: D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
-## Resumen del proyecto
 
-temática contraseñas
-#### Definición del producto
+## Definición del producto
+La página está orientada a usuarios que quieran enviarse mensajes y no quieran que sus amigxs y familia entiendan la conversación, volviendola secreta. Podrán conversar a traves de cualquier red social con mayor privacidad.
 
-La página está orientada a usuarios que quieran crear contraseñas más seguras a partir de palabras conocidas, de esa forma podrán
+El objetivo de la página es ayudar a proteger la información compartida en mensajes, de esa forma solo los participantes de la conversación puedan entenderla.
 
-- Quiénes son los principales usuarios de producto.
-- Cuáles son los objetivos de estos usuarios en relación con tu producto.
-- Cómo crees que el producto que estás creando está resolviendo sus problemas.
+En cuestiones de personalización y diseño de la página, utilicé un background con colores gradientes para que la atención del usuario esté centrada en el cifrado y descifrado. Así como el uso de tipografía en color blanco, que "ilumina" la página.
 
-#### Interfaz de usuario (UI)
+Y un factor importante en toda página,el diseño responsivo, adapté la página para que se visualice adecuadamente en todo dispositivo, como se muestra en la imagen:
+
+![alt text](https://i.ibb.co/7NF4GYZ/responsive.jpg "Page in other Devices")
+
+### Interfaz de usuario (UI)
 
 La interfaz permite al usuario:
 
-- Elegir un desplazamiento (_offset_), indicando cuántas posiciones queremos que el cifrado desplace cada caracter.
+- Elegir un código de seguridad (_offset_), indicando cuántas posiciones queremos que el cifrado desplace cada caracter.
 - Insertar un mensaje (texto) que queremos cifrar.
 - Ver el resultado del mensaje cifrado.
 - Insertar un mensaje (texto) a descifrar.
 - Ver el resultado del mensaje descifrado.
 
-#### Scripts / Archivos
+### Scripts / Archivos
 
 El _boilerplate_ contiene una estructura de archivos como punto de partida así
 como toda la configuración de dependencias y tests de ejemplo:
@@ -70,7 +73,7 @@ Desarrollo Front-end:
 * [Aprende más sobre `String.fromCharCode()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/String/fromCharCode)
 * [Aprende más sobre `ASCII`](http://conceptodefinicion.de/ascii/)
 * [Documentación de NPM](https://docs.npmjs.com/)
-* [Guía de Responsive](https://developers.google.com/web/fundamentals/design-and-ux/responsive/):conceptos básicos de diseño responsivo.
+* [Guía de Responsive Web Design](https://developers.google.com/web/fundamentals/design-and-ux/responsive/)
 
 Herramientas:
 - GitHub y GitHub Pages.

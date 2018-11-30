@@ -1,52 +1,63 @@
 body{
- padding: 10px;
- background-image:url(http://www.brandgradients.com/img/backgrounds/instagram-hex-colors-gradient-background.png);
- background-position: center;
- background-size: cover;
- text-align: center;
- color:white;
- font-size: 25px}
+  padding: 10px;
+  background-image:url(http://www.brandgradients.com/img/backgrounds/instagram-hex-colors-gradient-background.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  color:white;
+  font-size: 25px}
 h1{
- margin-top: 10px;
- text-shadow: 2px 4px black;
- font-family: 'Carter One', cursive;
- font-size: 2em;
- text-align: center;
- user-select: none}
+  margin-top: 10px;
+  text-shadow: 2px 4px black;
+  font-family: 'Carter One', cursive;
+  font-size: 2em;
+  text-align: center;
+  user-select: none}
 h2,h3{
- text-align: center;
- font-family: 'Lato', sans-serif;
- font-size: 1em;
- margin: 50px;
- user-select: none}
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  margin: 50px;
+  user-select: none}
 p{
- text-align: center;
- font-family:'Viga', sans-serif;
- font-size: 25px;
- user-select: none}
-#message1, #message2{
- box-shadow: 4px 4px black;
- width: 350px;
- display:table-cell;
- height: 100px}
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  margin: 2px;
+  user-select: none}
+h4,#container{
+  text-align: center;
+  font-family:'Rubik', sans-serif;
+  font-size: 1em;
+  user-select: none}
+#message1, #result{
+  box-shadow: 4px 4px black;
+  width: 350px;
+  height: 100px}
 #key{
- margin-left: auto;
- width: 70px}
-#botoncifro, #botondescifro, #botonreset{
- font-size: 20px;
- display: inline-block;
- -webkit-transition-duration: 0.4s;
- transition-duration: 0.4s;
- cursor: pointer;
- text-decoration: none;
- background: white;
- border-radius: 8px}
+  margin-left: auto;
+  width: 70px}
+#showInstructions{
+  font-size: 1em;
+}
+#botonayuda{
+  font-size: 0.8em;
+  color: white;
+  background: black;
+  border-radius: 40px}
+#botoncifro, #botondescifro{
+  font-size: 1em;
+  display: inline-block;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  text-decoration: none;
+  background: white;
+  border-radius: 20px}
 #botoncifro:hover {
- background-color: black;
- color: white}
+  background-color: black;
+  color: white}
 #botondescifro:hover{
- background-color: black;
- color:white}
-#botonreset:hover{
   background-color: black;
   color:white}

@@ -1,40 +1,64 @@
 window.cipher = {
-//CIFRADO
-  encode:function (string,offset){
+    //CIFRADO
+    encode: (offset, string) => {
 
-  offset = parseInt(offset);
-  let resultEncode = '';
-  let mayusText = string.toUpperCase();
+        let resultEncode = '';
+        let convertLettersToAscii;
+        let convertingMessage;
+        //convirtiendoletraaAscci
+        for (let i = 0; i < string.length; i++) {
+            convertLettersToAscii = string.charCodeAt(i);
+            //mayusculas
+            if (convertLettersToAscii >= 65 && convertLettersToAscii <= 90) {
+                convertingMessage = ((convertLettersToAscii - 65 + offset) % 26 + 65);
+                resultEncode += String.fromCharCode(convertingMessage);
+            }
+            //minusculas
+            else if (convertLettersToAscii >= 97 && convertLettersToAscii <= 122) {
+                convertingMessage = ((convertLettersToAscii - 97 + offset) % 26 + 97)
+                resultEncode += String.fromCharCode(convertingMessage);
+            }
+            //otros caracteres
+            else {
+                resultEncode += String.fromCharCode(convertLettersToAscii);
+            }
+        }
+        return resultEncode;
+    },
 
-  for (let i = 0 ; i < mayusText.length ; i++){
-    if(mayusText[i] === ' '){
-       resultEncode += ' ';
-  }
-    else {
-  const cifrando = String.fromCharCode((mayusText.charCodeAt(i)-65+offset)%26+65);
-  resultEncode += cifrando;
-  }
-  }
-  console.log("entro code");
-  return resultEncode;
-  },
-//DESCIFRADO
-  decode:function (string,offset) {
+    decode: (offset, string) => {
+        offset = parseInt(offset);
+        let resultEncode = '';
+        let convertLettersToAscii;
+        let convertingMessage;
+        //
+        for (let i = 0; i < string.length; i++) {
+            convertLettersToAscii = string.charCodeAt(i);
+            //mayusculas
+            if (convertLettersToAscii >= 65 && convertLettersToAscii <= 90) {
+                convertingMessage = ((convertLettersToAscii - 90 - offset) % 26 + 90)
+                resultEncode += String.fromCharCode(convertingMessage);
+            }
+            //minusculas
+            else if (convertLettersToAscii >= 97 && convertLettersToAscii <= 122) {
+                convertingMessage = ((convertLettersToAscii - 122 - offset) % 26 + 122)
+                resultEncode += String.fromCharCode(convertingMessage);
+            }
+            //otros caracteres
+            else {
+                resultEncode += String.fromCharCode(convertingMessage);
+            }
+        }
+        return resultEncode;
+    },
 
-  offset = parseInt(offset);
-  let resultDecode = '';
-  let mayusText = string.toUpperCase();
-
-  for (let i = 0 ; i < mayusText.length ; i++){
-    if(mayusText[i] === ' '){
-       resultDecode += ' ';
-  }
-    else {
-  const cifrando = String.fromCharCode((mayusText.charCodeAt(i)-65-(offset%26))%26+65);
-  resultDecode += cifrando;
-  }
-  }
-  console.log("entro decode");
-  return resultDecode;
-  }
-  };
+    createCipherWithOffset: (offset) => {
+        let objectCipher = {
+            encode: (string) =>
+                cipher.encode(offset, string),
+            decode: (string) =>
+                cipher.decode(offset, string),
+        };
+        return objectCipher;
+    }
+};
