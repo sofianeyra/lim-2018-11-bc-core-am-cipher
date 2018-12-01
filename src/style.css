@@ -1,20 +1,18 @@
 body{
-  padding: 10px;
   background-image:url(http://www.brandgradients.com/img/backgrounds/instagram-hex-colors-gradient-background.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
   color:white;
-  font-size: 25px}
+  font-size: 1.5em}
 h1{
-  margin-top: 10px;
   text-shadow: 2px 4px black;
   font-family: 'Carter One', cursive;
   font-size: 2em;
   text-align: center;
   user-select: none}
-h2,h3{
+h2,h4{
   text-align: center;
   font-family: 'Lato', sans-serif;
   font-size: 1em;
@@ -26,20 +24,22 @@ p{
   font-size: 1em;
   margin: 2px;
   user-select: none}
-h4,#container{
+h3,#container{
   text-align: center;
   font-family:'Rubik', sans-serif;
   font-size: 1em;
   user-select: none}
+#message1{
+  margin:15px;
+}
 #message1, #result{
   box-shadow: 4px 4px black;
-  width: 350px;
-  height: 100px}
+  width: 60%;
+  height: 90px}
 #key{
-  margin-left: auto;
-  width: 70px}
+  width: 20%}
 #showInstructions{
-  font-size: 1em;
+  font-size: 1em
 }
 #botonayuda{
   font-size: 0.8em;
@@ -47,6 +47,7 @@ h4,#container{
   background: black;
   border-radius: 40px}
 #botoncifro, #botondescifro{
+  margin:10px;
   font-size: 1em;
   display: inline-block;
   -webkit-transition-duration: 0.4s;
